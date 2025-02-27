@@ -1,0 +1,72 @@
+/* 内容脚本的样式 */
+
+.ailong-panel {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  width: 300px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  padding: 15px;
+  font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+.ailong-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.ailong-panel-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ff0050;
+  margin: 0;
+}
+
+.ailong-panel-close {
+  cursor: pointer;
+  font-size: 18px;
+  color: #999;
+}
+
+.ailong-panel-content {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.ailong-btn {
+  background-color: #ff0050;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.ailong-btn:hover {
+  background-color: #d10045;
+}
+
+.ailong-loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 0, 80, 0.3);
+  border-radius: 50%;
+  border-top-color: #ff0050;
+  animation: ailong-spin 1s ease-in-out infinite;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+@keyframes ailong-spin {
+  to { transform: rotate(360deg); }
+}

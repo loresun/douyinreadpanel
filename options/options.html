@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>AIlong抖音阅读助手 - 设置</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <h1>AIlong抖音阅读助手 - 设置</h1>
+    
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="api-settings">API设置</button>
+      <button class="tab-btn" data-tab="prompt-settings">提示词设置</button>
+      <button class="tab-btn" data-tab="history">历史记录</button>
+    </div>
+    
+    <div id="api-settings" class="tab-content active">
+      <h2>API设置</h2>
+      <div class="form-group">
+        <label for="douyin-api-key">扣子API密钥</label>
+        <input type="password" id="douyin-api-key" placeholder="默认: pat_hZ6doHmuliB7dWwl7AWn9vJ1S91VyjJ0LgYIN6kSZb8TUqEiHg4Cv9DJaSRB1MMT">
+        <small class="form-hint">默认API密钥: pat_hZ6doHmuliB7dWwl7AWn9vJ1S91VyjJ0LgYIN6kSZb8TUqEiHg4Cv9DJaSRB1MMT</small>
+      </div>
+      <div class="form-group">
+        <label for="douyin-bot-id">扣子Bot ID</label>
+        <input type="text" id="douyin-bot-id" placeholder="默认: 7474274929681842187">
+        <small class="form-hint">默认Bot ID: 7474274929681842187</small>
+      </div>
+      <div class="form-group">
+        <label for="ai-model-api-key">AI模型API密钥</label>
+        <input type="password" id="ai-model-api-key" placeholder="输入您的AI模型API密钥">
+      </div>
+      <div class="form-group">
+        <label for="webhook-url">Webhook URL</label>
+        <input type="text" id="webhook-url" placeholder="输入飞书Webhook URL">
+        <small class="form-hint">用于将视频信息发送到飞书</small>
+      </div>
+      <div class="form-group">
+        <label for="use-tool-response">使用Tool Response</label>
+        <div class="checkbox-container">
+          <input type="checkbox" id="use-tool-response" checked>
+          <small class="form-hint">优先使用API返回的tool_response字段内容（推荐）</small>
+        </div>
+      </div>
+      <button id="save-api-settings" class="btn">保存设置</button>
+      <div id="api-settings-status" class="status"></div>
+    </div>
+    
+    <div id="prompt-settings" class="tab-content">
+      <h2>提示词设置</h2>
+      <div class="form-group">
+        <label for="summary-prompt">内容摘要提示词</label>
+        <textarea id="summary-prompt" placeholder="请输入内容摘要的提示词模板"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="keywords-prompt">关键词提取提示词</label>
+        <textarea id="keywords-prompt" placeholder="请输入关键词提取的提示词模板"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="rewrite-prompt">文案改写提示词</label>
+        <textarea id="rewrite-prompt" placeholder="请输入文案改写的提示词模板"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="custom-prompt">自定义分析提示词</label>
+        <textarea id="custom-prompt" placeholder="请输入自定义分析的提示词模板"></textarea>
+      </div>
+      <button id="save-prompt-settings" class="btn">保存设置</button>
+      <button id="reset-prompt-settings" class="btn secondary">恢复默认</button>
+      <div id="prompt-settings-status" class="status"></div>
+    </div>
+    
+    <div id="history" class="tab-content">
+      <h2>历史记录</h2>
+      <div class="search-bar">
+        <input type="text" id="history-search" placeholder="搜索历史记录...">
+        <div class="history-buttons">
+          <button id="export-history" class="btn primary">导出为表格</button>
+          <button id="clear-history" class="btn secondary">清空历史</button>
+        </div>
+      </div>
+      <div id="history-list" class="history-list">
+        <!-- 历史记录将在这里动态生成 -->
+        <div class="empty-history">暂无历史记录</div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="options.js"></script>
+</body>
+</html>

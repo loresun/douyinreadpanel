@@ -1,0 +1,175 @@
+body {
+  font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+h1 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ff0050;
+}
+
+h2 {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.tabs {
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.tab-btn {
+  background-color: transparent;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #666;
+}
+
+.tab-btn:hover {
+  color: #ff0050;
+}
+
+.tab-btn.active {
+  color: #ff0050;
+  border-bottom: 2px solid #ff0050;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.btn {
+  background-color: #ff0050;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn:hover {
+  background-color: #d10045;
+}
+
+.btn.secondary {
+  background-color: #999;
+}
+
+.btn.secondary:hover {
+  background-color: #777;
+}
+
+.status {
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.status.success {
+  background-color: #e6f7e6;
+  color: #2e7d32;
+}
+
+.status.error {
+  background-color: #fdecea;
+  color: #c62828;
+}
+
+.search-bar {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+#history-search {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.history-list {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.history-item {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.history-item:hover {
+  background-color: #f5f5f5;
+}
+
+.history-item-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.history-item-date {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 5px;
+}
+
+.history-item-content {
+  font-size: 14px;
+  color: #666;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.empty-history {
+  text-align: center;
+  padding: 20px;
+  color: #999;
+}

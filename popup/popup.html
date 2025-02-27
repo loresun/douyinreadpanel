@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>AIlong抖音阅读助手</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>AIlong抖音阅读助手</h1>
+    
+    <!-- 顶部按钮区域 -->
+    <div class="top-buttons">
+      <button id="get-content">获取文案</button>
+      <button id="send-to-feishu">获取文案并推送到飞书</button>
+      <button id="show-panel">显示面板</button>
+    </div>
+    
+    <!-- 视频链接信息 -->
+    <div class="info-item">
+      <span>链接:</span>
+      <p id="video-link">未获取</p>
+      <button id="copy-link">复制</button>
+    </div>
+    <p id="video-title" style="display:none;">未获取</p>
+    
+    <!-- 标签页容器 -->
+    <div class="tab-container">
+      <!-- 标签页按钮 -->
+      <div class="tab-buttons">
+        <button class="tab-btn active" data-tab="content-tab">文案显示</button>
+        <button class="tab-btn" data-tab="analysis-tab">分析</button>
+      </div>
+      
+      <!-- 标签页内容 -->
+      <div class="tab-contents">
+        <!-- 文案显示标签页 -->
+        <div id="content-tab" class="tab-content active">
+          
+          <div class="content-section">
+            <h2>视频文案</h2>
+            <div id="loading-content" class="hidden">正在获取文案...</div>
+            <div id="content-error" class="hidden error">获取文案失败</div>
+            <div id="content-container">
+              <p id="video-content">点击"获取文案"按钮获取视频文案</p>
+              <button id="copy-content">复制文案</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 分析标签页 -->
+        <div id="analysis-tab" class="tab-content">
+          <div class="analysis-section">
+            <div class="analysis-options">
+              <select id="analysis-type">
+                <option value="summary">内容摘要</option>
+                <option value="keywords">关键词提取</option>
+                <option value="rewrite">文案改写</option>
+                <option value="custom">自定义分析</option>
+              </select>
+              <button id="analyze-btn">分析</button>
+            </div>
+            <div id="loading-analysis" class="hidden">分析中...</div>
+            <div id="analysis-error" class="hidden error">分析失败</div>
+            <div id="analysis-result">
+              <p>选择分析类型并点击"分析"按钮</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 底部按钮区域 -->
+    <div class="footer">
+      <button id="settings-btn">设置</button>
+      <button id="history-btn">查看历史</button>
+      <button id="help-btn">帮助</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
