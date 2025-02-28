@@ -72,8 +72,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // 从存储中获取API设置
     chrome.storage.sync.get(['douyinApiKey', 'douyinBotId'], function(data) {
       console.log('获取到API设置:', { apiKey: data.douyinApiKey ? '已设置' : '使用默认值', botId: data.douyinBotId ? '已设置' : '使用默认值' });
-      const apiKey = data.douyinApiKey || 'pat_hZ6doHmuliB7dWwl7AWn9vJ1S91VyjJ0LgYIN6kSZb8TUqEiHg4Cv9DJaSRB1MMT';
-      const botId = data.douyinBotId || '7474274929681842187';
+      const apiKey = data.douyinApiKey || 'pat_83B92PL17jNaa60C1GuleCCcWrP0FzdYHgjS2wHCF2edVQN8zKt4fp0ic4XCcCCA';
+      const botId = data.douyinBotId || '7476121456825663538';
       
       console.log('准备发送消息到background script');
       // 通过后台脚本调用API获取文案，避免CORS问题
@@ -240,8 +240,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 从存储中获取API设置
     chrome.storage.sync.get(['douyinApiKey', 'douyinBotId', 'webhookUrl'], function(data) {
-      const apiKey = data.douyinApiKey || 'pat_hZ6doHmuliB7dWwl7AWn9vJ1S91VyjJ0LgYIN6kSZb8TUqEiHg4Cv9DJaSRB1MMT';
-      const botId = data.douyinBotId || '7474274929681842187';
+      const apiKey = data.douyinApiKey || 'pat_83B92PL17jNaa60C1GuleCCcWrP0FzdYHgjS2wHCF2edVQN8zKt4fp0ic4XCcCCA';
+      const botId = data.douyinBotId || '7476121456825663538';
       const webhookUrl = data.webhookUrl;
       
       if (!webhookUrl) {

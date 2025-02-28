@@ -89,15 +89,15 @@ function checkUrlHash() {
 function loadApiSettings() {
   chrome.storage.sync.get(['douyinApiKey', 'douyinBotId', 'aiModelApiKey', 'webhookUrl', 'useToolResponse'], function(data) {
     // 设置默认值或保存的值
-    document.getElementById('douyin-api-key').value = data.douyinApiKey || 'pat_hZ6doHmuliB7dWwl7AWn9vJ1S91VyjJ0LgYIN6kSZb8TUqEiHg4Cv9DJaSRB1MMT';
-    document.getElementById('douyin-bot-id').value = data.douyinBotId || '7474274929681842187';
+    document.getElementById('douyin-api-key').value = data.douyinApiKey || 'pat_83B92PL17jNaa60C1GuleCCcWrP0FzdYHgjS2wHCF2edVQN8zKt4fp0ic4XCcCCA';
+    document.getElementById('douyin-bot-id').value = data.douyinBotId || '7476121456825663538187';
     document.getElementById('ai-model-api-key').value = data.aiModelApiKey || '';
     document.getElementById('webhook-url').value = data.webhookUrl || '';
     document.getElementById('use-tool-response').checked = data.useToolResponse !== false; // 默认为true
     
     // 添加默认值提示
-    document.getElementById('douyin-api-key').placeholder = '默认: pat_hZ6doHmuliB7dWwl7AWn9vJ1S91VyjJ0LgYIN6kSZb8TUqEiHg4Cv9DJaSRB1MMT';
-    document.getElementById('douyin-bot-id').placeholder = '默认: 7474274929681842187';
+    document.getElementById('douyin-api-key').placeholder = '默认: pat_83B92PL17jNaa60C1GuleCCcWrP0FzdYHgjS2wHCF2edVQN8zKt4fp0ic4XCcCCA';
+    document.getElementById('douyin-bot-id').placeholder = '默认: 7476121456825663538';
   });
 }
 

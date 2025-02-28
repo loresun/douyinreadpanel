@@ -107,11 +107,11 @@ async function fetchDouyinContent(videoUrl, apiKey, botId) {
         'Accept': '*/*',
         'Host': 'api.coze.cn',
         'Connection': 'keep-alive',
-        'Authorization': `Bearer ${apiKey || 'pat_hZ6doHmuliB7dWwl7AWn9vJ1S91VyjJ0LgYIN6kSZb8TUqEiHg4Cv9DJaSRB1MMT'}`
+        'Authorization': `Bearer ${apiKey || 'pat_83B92PL17jNaa60C1GuleCCcWrP0FzdYHgjS2wHCF2edVQN8zKt4fp0ic4XCcCCA'}`
       },
       body: JSON.stringify({
         conversation_id: "douyinpanel_" + Date.now(), // 生成唯一会话ID
-        bot_id: botId || '7474274929681842187', // 使用默认的bot id
+        bot_id: botId || '7476121456825663538', // 使用默认的bot id
         user: 'douyinpanel_user', // 用户标识
         query: videoUrl, // 发送抖音视频链接作为查询
         stream: false
